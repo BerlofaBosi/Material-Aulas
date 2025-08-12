@@ -1,0 +1,152 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #252329;
+  font-family: "Poppins", sans-serif;
+  color: snow;
+
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+.task {
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+
+.task img{
+  max-width: 100%;
+  margin-bottom: 1em;;
+}
+
+.container {
+  background-color: snow;
+  border: 1px solid lightgray;
+  height: 200px;
+  border-radius: 4px;
+}
+
+.item {
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+  background-color: tomato;
+  text-align: center;
+}
+
+.sm {
+  width: 20px;
+}
+
+.lg {
+  width: 80px;
+}
+
+/* TASK 1 */
+
+.task-1 .container {
+  
+}
+
+/* TASK 2 */
+
+.task-2 .container {
+  
+}
+
+/* TASK 3 */
+
+.task-3 .container {
+  
+}
+
+/* TASK 4 */
+
+.task-4 .option-1 .container {
+  
+}
+
+.task-4 .option-2 .container {
+  
+}
+
+.task-4 .option-2 .container > :last-child{
+ 
+}
+
+.task-4 .option-3 .container {
+  
+}
+
+.task-4 .option-3 .item:first-child {
+  
+}
+
+/* TASK 5 */
+
+.task-5 .container {
+  
+}
+
+.task-5 .item-1 {
+  
+}
+
+.task-5 .item-2 {
+  
+}
+
+.task-5 .item-3 {
+
+}
+
+.task-5 .item-4 {
+
+}
+
+/* TASK 6 */
+
+.task-6 .container {
+  
+}
+
+.task-6 .item {
+  
+}
+
+@media (min-width: 375px) {
+  .task-6 .item {
+    
+  }
+}
+
+/* TASK 7 */
+
+.task-7 .container {
+
+}
+
+.task-7 .container > :first-child{
+    
+}
+
+.task-7 .container > :nth-child(2){
+   
+}
+
+
+
+/* TASK 8 */
+
+.task-8 .container {
+}
+
+.task-8 .item {
+  
+}

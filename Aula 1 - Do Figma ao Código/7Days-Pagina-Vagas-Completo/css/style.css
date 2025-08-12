@@ -1,0 +1,293 @@
+:root{
+    --bg-white: #FFF;
+    --dark-gray: #101828;
+    --light-gray: #667085;
+    --primary-red: #8E2424;
+
+    --font-family: 'Inter', sans-serif;
+
+    --media-query-mobile: (max-width: 768px);
+    --media-query-tablet: (min-width: 769px) and (max-width: 1024px);
+    --media-query-desktop: (min-width: 1025px);
+
+    --horizontal-padding: 2rem;
+}
+
+/* Reset CSS - Fonte: https://www.joshwcomeau.com/css/custom-css-reset/ */
+
+/* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* 3. Enable keyword animations */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    interpolate-size: allow-keywords;
+  }
+}
+
+body {
+  /* 4. Add accessible line-height */
+  line-height: 1.5;
+  /* 5. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 6. Improve media defaults */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 7. Inherit fonts for form controls */
+input, button, textarea, select {
+  font: inherit;
+}
+
+/* 8. Avoid text overflows */
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+/* 9. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
+/*
+  10. Create a root stacking context
+*/
+#root, #__next {
+  isolation: isolate;
+}
+
+/* Estilos gerais */
+
+body{
+    font-size: 16px;
+    font-family: var(--font-family);
+    color: var(--light-gray);
+}
+
+.container{
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 var(--horizontal-padding);
+    text-align: center;
+}
+
+.btn{
+    padding: 0.625em 1.125em;
+    background-color: var(--primary-red);
+    color: var(--bg-white);
+    border: none;
+    border-radius: 0.25em;
+    text-decoration: none;
+    box-shadow: 0 1px 2px 0 rgba(16, 24, 40, 0.05);
+}
+
+a {
+    color: var(--light-gray);
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.section-marker{
+    color: var(--primary-red);
+    font-weight: 600;
+}
+
+.wrapper{
+    margin-bottom: 6rem;
+}
+
+/* Navegação  */
+
+.nav-wrapper{
+    display: flex;
+    align-items: center;
+    gap: 2em;
+    padding: 1.5em 0;
+}
+
+.main-nav, .logo, .nav-buttons{
+    flex: 1;
+}
+
+.main-nav{
+    flex: 3;
+
+    & ul{
+        display: flex;
+        align-items: center;
+        gap: 2em;
+        
+    }
+}
+
+.nav-buttons{
+    display: flex;
+    align-items: center;
+    gap: 2em;
+}
+
+/* Seção principal */
+
+.main-heading{
+    font-size: 3em;
+    color: var(--dark-gray); 
+}
+.hero{
+    padding-top: 6em;
+
+    & > * {
+        padding-bottom: 1.75rem;
+    }
+
+}
+
+ .hero-description{
+        max-width: 50%;
+        margin: 0 auto;
+    }
+/* Seção cards */
+
+.even-columns{
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+    text-align: left;
+
+    
+    & > * {
+        flex: 1 1 250px;
+    }
+}
+
+.card-numbers{
+    font-size: 3.75em;
+    color: var(--primary-red);
+    font-weight: 600;
+    line-height: 4.5rem;
+}
+
+.card-title{
+    font-weight: 500;
+    font-size: 1.125em;
+    color: var(--dark-gray);
+    line-height: 1.75rem;
+    padding-top: 0.5rem;
+}
+
+.card-description{
+    line-height: 1.5rem;
+    padding-top: 0.5rem;
+}
+
+/* Destaque Vagas abertas */
+
+.vagas-section > *{
+    padding: 0.5em 0;
+}
+
+.vagas-highlight{
+    color: var(--primary-red);
+    padding:  0.25em 0.75em;
+    background: rgba(142, 36, 36, 0.05);
+    border-radius: 1em;
+}
+
+.heading-2{
+    color: var(--dark-gray);
+}
+
+/* Vagas */
+
+.vagas{
+    text-align: left;
+    margin: 0 auto;
+    width: 50%;
+}
+
+.vagas-area-title{
+    color: var(--dark-gray);
+    font-weight: 500;
+}
+
+.card-vaga{
+    border-radius: 16px;
+    border: 1px solid #EAECF0;
+    background: var(#FFF);
+    padding: 1.5em 1.5em 1.75em 1.5em;
+    margin: 1.5em 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+
+     & h4{
+        color: var(--dark-gray);
+
+    }
+}
+
+.container-vagas-details span:first-child{
+    margin-right: 1em;
+    
+}
+
+/* Depoimentos */
+.depoimentos > *{
+    padding: 0.5em 0;
+}
+
+.avatar-info{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    & img{
+        margin-bottom: .5em;
+    }
+}
+
+.avatar-name{
+    font-weight: 600;
+    color: var(--dark-gray);
+}
+
+/* Footer */
+.footer-content > *{
+    padding: .75em 0;
+}
+
+.form-footer{
+    display: flex;
+    justify-content: center;
+    gap: .75em;
+
+    
+    & input{
+        padding: 0.75em 1em;
+        border-radius: 8px;
+        border: 1px solid #D0D5DD;
+        background: var( #FFF);
+
+        /* Shadow/xs */
+        box-shadow: 0 1px 2px 0 rgba(16, 24, 40, 0.05);
+    }
+}

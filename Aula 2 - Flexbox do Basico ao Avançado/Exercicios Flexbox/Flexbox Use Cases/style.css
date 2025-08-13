@@ -51,63 +51,68 @@ body {
 /* TASK 1 */
 
 .task-1 .container {
-  
+  display: flex;
+  flex-direction: row;
 }
 
 /* TASK 2 */
 
 .task-2 .container {
-  
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* TASK 3 */
 
 .task-3 .container {
-  
+  display: flex;
+  justify-content: space-around;
 }
 
 /* TASK 4 */
 
 .task-4 .option-1 .container {
-  
+  display: flex;
+  justify-content: space-between;
 }
 
 .task-4 .option-2 .container {
-  
+  display: flex;
 }
 
 .task-4 .option-2 .container > :last-child{
- 
+  margin-left: auto;
 }
 
 .task-4 .option-3 .container {
-  
+  display: flex;
 }
 
 .task-4 .option-3 .item:first-child {
-  
+  flex-grow: 1;
 }
 
 /* TASK 5 */
 
 .task-5 .container {
-  
+  display: flex;
 }
 
 .task-5 .item-1 {
-  
+  flex-grow: 1;
 }
 
 .task-5 .item-2 {
-  
+  flex-grow: 2;
 }
 
 .task-5 .item-3 {
-
+  flex-grow: 4;
 }
 
 .task-5 .item-4 {
-
+  flex-grow: 6
 }
 
 /* TASK 6 */
@@ -129,15 +134,15 @@ body {
 /* TASK 7 */
 
 .task-7 .container {
-
+  display: flex;
 }
 
 .task-7 .container > :first-child{
-    
+  flex: 1 1 70%;
 }
 
 .task-7 .container > :nth-child(2){
-   
+  flex: 1 1 30%;
 }
 
 

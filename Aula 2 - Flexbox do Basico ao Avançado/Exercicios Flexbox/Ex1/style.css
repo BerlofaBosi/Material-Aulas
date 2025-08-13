@@ -6,6 +6,25 @@ nav{
   list-style: none;
   padding: 0;
   margin: 0;
+  display: flex; /* Torna a caixa flexivel */
+  flex-direction: row; /* Muda a direção dos itens da caixa */
+  justify-content: space-around; /* Alinha Horizontalmente */
+  align-items: center; /* Alinha Verticalmente */
+  flex-wrap: wrap; /* Permite a quebra de linha */
+  align-content: center; /* Alinhamento de linhas quando o wrap ativado */
+  gap: 1em; /* Espaço entre os itens */
+  }
+
+  & ul > :first-child {
+    /* order: 1; */
+    flex-grow: 2;
+    flex-shrink: 2;
+    flex-basis: 30%;
+  }
+
+  & ul > * {
+    flex-shrink: 2;
+    flex-grow: 1;
   }
 
   & a:link,

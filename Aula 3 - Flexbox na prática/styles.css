@@ -1,0 +1,262 @@
+:root{
+    --brand-color: #1a6ccc;
+}
+
+/* CSS Reset */
+
+/* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+  margin: 0;
+}
+
+/* 3. Enable keyword animations */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    interpolate-size: allow-keywords;
+  }
+}
+
+body {
+  /* 4. Add accessible line-height */
+  line-height: 1.5;
+  /* 5. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 6. Improve media defaults */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 7. Inherit fonts for form controls */
+input, button, textarea, select {
+  font: inherit;
+}
+
+/* 8. Avoid text overflows */
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+/* 9. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
+/*
+  10. Create a root stacking context
+*/
+#root, #__next {
+  isolation: isolate;
+}
+
+/* Elementos Genéricos */
+
+ul{
+    list-style: none;
+    padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  font-family: 'Open Sans';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #edf2f7;
+}
+
+/* Elementos específicos */
+
+/* Header */
+
+.c-header {
+  background: var(--brand-color);
+}
+
+.c-logo {
+  font-size: 20px;
+  font-weight: bold;
+  
+  a {
+    color: #fff;
+  }
+}
+
+.c-header__nav {
+  
+  li {
+    display: inline-block;
+  }
+}
+
+.c-header__nav a, .c-user___options a {
+
+    padding: 8px;
+    color: #fff;
+
+}
+
+.c-user {
+  
+  & img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-left: 10px;
+  }
+}
+
+/* Conteúdo Principal */
+
+.wrapper {
+}
+
+aside {
+
+    & li{
+      padding: 0.5rem 0;
+      cursor: pointer;
+      font-weight: 500;
+      color: #555;
+
+      &.active{
+        color: #2563eb;
+        font-weight: 700;
+      }
+    }
+  }    
+
+main {
+
+  & i{
+    margin: .5em;
+  }
+}
+
+aside,
+.top-sellers-section,
+.top-articles-section,
+.latest-section {
+  background: #fff;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.05);
+  border-radius: 5px;
+  padding: 1rem;
+}
+
+/* Top Sellers */
+.top-sellers {
+    margin-top: 1rem;
+    
+}
+
+.c-seller {
+  margin-bottom: 2rem;
+  
+  h3 {
+    font-weight: bold;
+    color: #5a5a5a;
+    margin-bottom: 4px;
+  }
+  
+  p {
+    font-size: 0.85rem;
+  }
+  
+  .c-avatar {
+    margin-right: 0.5rem;
+  }
+}
+
+.c-avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 1px solid lightgrey;
+}
+
+/* Articles */
+
+.articles-wrapper {
+  
+}
+
+.c-article {
+  
+  @media (max-width: 699px) {
+    margin-bottom: 1rem;
+  }
+  
+  & a {
+    color: #5a5a5a;
+    
+  }
+  
+  & img {
+    width: 155px;
+    height: 105px;
+    margin-right: 0.7rem;
+    border-radius: 3px;
+  }
+  
+  & h3 {
+    font-size: 1.15rem;
+    line-height: 1.25;
+    margin-bottom: 0.5rem;
+  }
+  
+  & p {
+    font-size: 0.85rem;
+  }
+
+  & span{
+    color: #2563eb;
+    font-weight: 600;
+  }
+}
+
+/* Latest Articles */
+.latest-section{
+}
+
+.search-bar {
+  margin: 1rem 0;
+}
+
+.search-bar input {
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  border: 1px solid #ccc;
+}
+
+.search-bar button {
+  padding: 0.5rem 1rem;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.articles-wrapper.stacked {
+ 
+}
+
+.c-article.stacked {
+  
+  img {
+    height: 150px;
+    margin-bottom: 0.5rem;
+  }
+}

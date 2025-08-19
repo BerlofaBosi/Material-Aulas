@@ -1,0 +1,160 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #252329;
+  font-family: "Poppins", sans-serif;
+  color: snow;
+
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+.task {
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+
+.task img{
+  max-width: 100%;
+  margin-bottom: 1em;;
+}
+
+.container {
+  background-color: snow;
+  border: 1px solid lightgray;
+  height: 200px;
+  border-radius: 4px;
+}
+
+.item {
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+  background-color: tomato;
+  text-align: center;
+}
+
+.sm {
+  width: 20px;
+}
+
+.lg {
+  width: 80px;
+}
+
+/* TASK 1 */
+
+.task-1 .container {
+  display: flex;
+}
+
+/* TASK 2 */
+
+.task-2 .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* TASK 3 */
+
+.task-3 .container {
+  display: flex;
+  justify-content: space-around;
+}
+
+/* TASK 4 */
+
+.task-4 .option-1 .container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.task-4 .option-2 .container {
+  display: flex;
+}
+
+.task-4 .option-2 .container > :last-child{
+  margin-left: auto;
+}
+
+.task-4 .option-3 .container {
+  display: flex;
+}
+
+.task-4 .option-3 .item:first-child {
+  flex-grow: 1;
+}
+
+/* TASK 5 */
+
+.task-5 .container {
+  display: flex;
+}
+
+.task-5 .item-1 {
+  flex:1;
+}
+
+.task-5 .item-2 {
+  flex:2;
+}
+
+.task-5 .item-3 {
+  flex:4;
+}
+
+.task-5 .item-4 {
+  flex: 4;
+}
+
+/* TASK 6 */
+
+.task-6 .container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.task-6 .item {
+  width: 50%;
+}
+
+@media (min-width: 375px) {
+  .task-6 .item {
+    width: 25%;
+  }
+}
+
+
+/* TASK 7 */
+
+.task-7 .container {
+  display: flex;
+}
+
+.task-7 .container > :first-child{
+    flex: 1 1 70%;
+}
+
+.task-7 .container > :nth-child(2){
+    flex: 1 1 30%;
+}
+
+/* TASK 8 */
+
+.task-8 .container {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  gap: 1em;
+}
+
+.task-8 .item {
+  flex: 1 1 10em;
+}

@@ -1,0 +1,370 @@
+:root{
+    --brand-color: #1a6ccc;
+}
+
+/* CSS Reset */
+
+/* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+  margin: 0;
+}
+
+/* 3. Enable keyword animations */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    interpolate-size: allow-keywords;
+  }
+}
+
+body {
+  /* 4. Add accessible line-height */
+  line-height: 1.5;
+  /* 5. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 6. Improve media defaults */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 7. Inherit fonts for form controls */
+input, button, textarea, select {
+  font: inherit;
+}
+
+/* 8. Avoid text overflows */
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+/* 9. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
+/*
+  10. Create a root stacking context
+*/
+#root, #__next {
+  isolation: isolate;
+}
+
+/* Elementos Genéricos */
+
+ul{
+    list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  font-family: 'Open Sans';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #edf2f7;
+}
+
+/* Elementos específicos */
+
+/* Header */
+
+.c-header {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0 8px;
+  background: var(--brand-color);
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.05);
+  
+  @media (max-width: 600px) {
+    padding: 0.5rem;
+  }
+}
+
+.c-logo {
+  font-size: 20px;
+  font-weight: bold;
+  
+  a {
+    color: #fff;
+  }
+
+  @media (max-width: 600px) {
+    margin: 1rem 0;
+  }
+}
+
+.c-header__nav {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  
+  @media (max-width: 600px) {
+    margin-left: initial;
+  }
+  
+  li {
+    display: inline-block;
+
+  &:last-child::after{
+      content: "|"
+    }
+  }
+}
+
+.c-header__nav a, .c-user___options a {
+
+    padding: 8px;
+    color: #fff;
+
+}
+
+.c-user {
+  display: flex;
+  align-items: center;
+  
+  & img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-left: 10px;
+  }
+  
+  @media (max-width: 600px) {
+    display: none;
+  }
+}
+
+/* Conteúdo Principal */
+
+.wrapper {
+  max-width: 1280px;
+  display: flex;
+  padding: 0 1rem;
+  margin: 1rem auto;
+}
+
+aside {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-basis: 350px;
+  margin-right: 24px;
+  height: 70vh;
+
+  & ul{
+    padding: 0;
+
+    & li{
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.5rem 0;
+      cursor: pointer;
+      font-weight: 500;
+      color: #555;
+
+      &.active{
+        color: #2563eb;
+        font-weight: 700;
+      }
+    }
+  }    
+}
+
+main {
+  flex-grow: 1;
+
+  & i{
+    margin: .5em;
+  }
+}
+
+aside,
+.top-sellers-section,
+.top-articles-section,
+.latest-section {
+  background: #fff;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.05);
+  border-radius: 5px;
+  padding: 1rem;
+}
+
+/* Top Sellers */
+.top-sellers {
+  
+  @media (min-width: 400px) {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+    
+    > * {
+      flex: 0 0 50%;
+    }
+  }
+  
+  @media (min-width: 600px) {
+    > * {
+      flex: 0 0 33%;
+    }
+  }
+  
+  @media (min-width: 900px) {
+    > * {
+      flex: 0 0 25%;
+    }
+  }
+}
+
+.c-seller {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+  
+  h3 {
+    font-weight: bold;
+    color: #5a5a5a;
+    margin-bottom: 4px;
+  }
+  
+  p {
+    font-size: 0.85rem;
+  }
+  
+  .c-avatar {
+    margin-right: 0.5rem;
+  }
+}
+
+.c-avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 1px solid lightgrey;
+}
+
+/* Articles */
+
+.articles-wrapper {
+  @media (min-width: 700px) {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -16px;
+    margin-top: 1rem;
+    gap: 1rem 0;
+    
+    > * {
+      flex: 0 0 50%;
+      padding-right: 16px;
+    }
+  }
+  
+  
+}
+
+.c-article {
+  
+  @media (max-width: 699px) {
+    margin-bottom: 1rem;
+  }
+  
+  a {
+    display: flex;
+    align-items: center;
+    color: #5a5a5a;
+    
+    @media (max-width: 699px) {
+      flex-wrap: wrap;
+      
+      img {
+        margin-bottom: 0.5rem;
+      }
+    }
+
+  }
+  
+  img {
+    width: 155px;
+    height: 105px;
+    margin-right: 0.7rem;
+    border-radius: 3px;
+  }
+  
+  h3 {
+    font-size: 1.15rem;
+    line-height: 1.25;
+    margin-bottom: 0.5rem;
+  }
+  
+  p {
+    font-size: 0.85rem;
+  }
+
+  span{
+    color: #2563eb;
+    font-weight: 600;
+  }
+}
+
+/* Latest Articles */
+.latest-section{
+  margin-top: 1rem;
+}
+
+.search-bar {
+  display: flex;
+  margin: 1rem 0;
+  gap: 0.5rem;
+}
+
+.search-bar input {
+  flex: 1;
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  border: 1px solid #ccc;
+}
+
+.search-bar button {
+  padding: 0.5rem 1rem;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.articles-wrapper.stacked {
+  margin-right: -1rem;
+  
+  > * {
+    flex: 0 0 33%;
+    padding-right: 1rem;
+  }
+}
+
+.c-article.stacked {
+  a {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  img {
+    width: 100%;
+    height: 150px;
+    margin-bottom: 0.5rem;
+    margin-right: 0;
+  }
+}

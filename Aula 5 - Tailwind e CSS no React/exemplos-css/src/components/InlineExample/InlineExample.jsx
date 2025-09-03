@@ -1,3 +1,9 @@
 export default function InlineExample() {
-  return <div>Este é um exemplo de CSS Inline</div>;
+
+  const style = { 
+    backgroundColor: "red", 
+    color: "white"
+  }
+
+  return <div style={style}>Este é um exemplo de CSS Inline</div>;
 }

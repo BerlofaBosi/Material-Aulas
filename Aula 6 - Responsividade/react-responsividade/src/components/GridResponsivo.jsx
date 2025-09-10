@@ -11,8 +11,8 @@ export default function GridResponsivo() {
 
   return (
     <section className="p-6 max-w-6xl mx-auto">
-      <div className="grid grid-cols-4 grid-rows-2 gap-2 h-[500px]">
-        <div className="col-span-2 row-span-2 overflow-hidden rounded-xl">
+      <div className="grid grid-cols-4 md:grid-cols-4 grid-rows-2 gap-2 h-[500px]">
+        <div className="col-span-4 md:col-span-2 row-span-2 overflow-hidden rounded-xl">
           <img src={images.main} alt="Foto principal do imóvel"
                className="h-full w-full object-cover" />
         </div>

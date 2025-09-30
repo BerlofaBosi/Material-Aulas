@@ -1,0 +1,129 @@
+/* Reset básico */
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  background: #f9f9f9;
+  color: #333;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+section {
+  margin-bottom: 40px;
+}
+
+/* 1. Botão com efeito de pressão */
+.press-btn {
+  background: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+/* 2. Card com hover */
+.card {
+  width: 200px;
+  padding: 20px;
+  border-radius: 8px;
+  background: white;
+}
+
+/* 3. Link com underline animado */
+.link {
+  position: relative;
+  text-decoration: none;
+  color: #333;
+  font-size: 18px;
+}
+.link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 100%;
+  height: 2px;
+  background: #3498db;
+}
+
+/* 4. Loader animado */
+.loader {
+  width: 40px;
+  height: 40px;
+  border: 4px solid #ccc;
+  border-top-color: #3498db;
+  border-radius: 50%;
+}
+
+/* 5. Ícone que balança */
+.bell {
+  font-size: 40px;
+  cursor: pointer;
+  display: inline-block;
+}
+
+/* 6. Botão com gradiente animado */
+.gradient-btn {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 16px;
+  background: linear-gradient(270deg, #ff6ec4, #7873f5);
+  background-size: 200% 200%;
+  cursor: pointer;
+}
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* 7. Animação de digitação */
+.typing {
+  font-family: monospace;
+  font-size: 28px;
+  border-right: 2px solid black; /* cursor */
+  white-space: nowrap; /* impede quebra de linha */
+  overflow: hidden; /* esconde o texto que ainda não "saiu" */
+  width: 0; /* começa invisível */
+  animation: typing 3s steps(12) forwards, blink 0.7s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 12ch; } /* 12 caracteres = "Olá, mundo!" */
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+
+/* Exercício 1 */
+.like {
+  font-size: 40px;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+/* Exercício 2 */
+.progress-container {
+  width: 300px;
+  height: 30px;
+  border: 2px solid #333;
+  border-radius: 5px;
+  overflow: hidden;
+  margin: 20px;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, #3498db, #2ecc71);
+}

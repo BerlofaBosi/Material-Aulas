@@ -23,6 +23,16 @@ section {
   border: none;
   border-radius: 6px;
   font-size: 16px;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.press-btn:hover {
+  background-color: rgb(17, 60, 18);
+
+}
+
+.press-btn:active {
+  transform: scale(0.95);
 }
 
 /* 2. Card com hover */
@@ -31,6 +41,12 @@ section {
   padding: 20px;
   border-radius: 8px;
   background: white;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
 /* 3. Link com underline animado */
@@ -45,9 +61,14 @@ section {
   position: absolute;
   left: 0;
   bottom: -3px;
-  width: 100%;
+  width: 0%;
   height: 2px;
   background: #3498db;
+  transition: width 0.2s ease;
+}
+
+.link:hover::after {
+  width: 100%;
 }
 
 /* 4. Loader animado */
@@ -57,6 +78,17 @@ section {
   border: 4px solid #ccc;
   border-top-color: #3498db;
   border-radius: 50%;
+  animation: rotate 1s ease infinite;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0)
+  }
+
+  100% {
+    transform: rotate(360deg)
+  }
 }
 
 /* 5. Ícone que balança */
@@ -64,6 +96,32 @@ section {
   font-size: 40px;
   cursor: pointer;
   display: inline-block;
+}
+
+.bell:hover {
+  animation: badalada 0.5s ease;
+}
+
+@keyframes badalada {
+  0% {
+    transform: rotate(0)
+  }
+
+  25% {
+    transform: rotate(10deg)
+  }
+
+  50% {
+    transform: rotate(-10deg)
+  }
+
+  75% {
+    transform: rotate(5deg)
+  }
+
+  100% {
+    transform: rotate(0)
+  }
 }
 
 /* 6. Botão com gradiente animado */
@@ -76,6 +134,7 @@ section {
   background: linear-gradient(270deg, #ff6ec4, #7873f5);
   background-size: 200% 200%;
   cursor: pointer;
+  animation: gradientMove 2s ease infinite;
 }
 @keyframes gradientMove {
   0% { background-position: 0% 50%; }
@@ -110,6 +169,21 @@ section {
   border: none;
   background: none;
   cursor: pointer;
+  animation: pulse 1s ease infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1)
+  }
+
+  50% {
+    transform: scale(1.2)
+  }
+
+  100% {
+    transform: scale(1)
+  }
 }
 
 /* Exercício 2 */
@@ -126,4 +200,15 @@ section {
   width: 100%;
   height: 100%;
   background: linear-gradient(90deg, #3498db, #2ecc71);
+  animation: progress 4s ease infinite;
+}
+
+@keyframes progress {
+  0% {
+    width: 0%
+  }
+
+  100% {
+    width: 100%
+  }
 }
